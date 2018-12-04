@@ -6,7 +6,7 @@
 
 Veillez à ce que  git soit préalablement bien configuré à l'aide de ce [Lien](https://help.github.com/articles/set-up-git/)
 
-## Etape 1 : " *Forker* le dépot dans votre compte github "
+## Etape 1 : *Forker* le dépot dans votre compte github
 
 Pour forker le dépot sur notre compte github,
 
@@ -21,7 +21,8 @@ Plus d'informations, sur ce [Lien](https://help.github.com/articles/fork-a-repo/
 
 Pour cloner une copie de notre dépôt forké en local, il suffit de taper l'instruction suivante dans le terminal :
 
-```git clone https://github.com/joelst91/MoSEF-projet-2018.git
+```
+git clone https://github.com/joelst91/MoSEF-projet-2018.git
 ```
 
 Plus d'information sur ce [Lien](https://help.github.com/articles/set-up-git/)
@@ -31,7 +32,8 @@ Plus d'information sur ce [Lien](https://help.github.com/articles/set-up-git/)
 Pour créer le fichier script au format bash, il faut taper l'instruction suivante dans le terminal, dans notre répertoire
 MoSEF-projet-2018
 
-```vim fich_semaine_derniere.sh
+```
+vim fich_semaine_derniere.sh
 ```
 
 Le fichier contient les lignes de codes suivantes:
@@ -46,14 +48,14 @@ ls
 ```
 Pour executer le scipt on utilise l'instruction
 
-```bash fich_semaine_derniere.sh
 ```
-Pour afficher la date et  le moment d'execution du script, on utilise la variable date avec les "options":
+bash fich_semaine_derniere.sh
+```
+- Pour afficher la date et  le moment d'execution du script, on utilise la variable date avec les "options":
 jour, mois, année, heure, minute, seconde.
-La variable d'environnement username est utilisée, étant associé à 'sorbonne', le script demande le nom de la personne.
-Ensuite le script demande de taper le chemin du repertoire souhaité à la suite de /home/sorbonne, il suffit donc de taper le nom du
-ou des repertoires ou sous-répertoires directement, par exemple Bureau, Documents ou bien repos/MoSEF-projet-2018 etc...
-La liste du contenu du chemin du repertoire apparaît.
+- La variable d'environnement username est utilisée, étant associé à 'sorbonne', le script demande le nom de la personne.
+- Ensuite le script demande de taper le chemin du repertoire souhaité à la suite de /home/sorbonne, il suffit donc de taper le nom du ou des repertoires ou sous-répertoires directement, par exemple Bureau, Documents ou bien repos/MoSEF-projet-2018 etc...
+- La liste du contenu du chemin du repertoire apparaît.
 
 ## Etape 4 : Commiter le fichier dans votre dépot local puis pousser les modifications dans le dépot distant
 
@@ -68,13 +70,16 @@ git push -u origin master
 ## Etape 5 : Sur le dépot local, créer une nouvelle branche
 
 Pour créer une nouvelle branche en locale on écrit l'instruction suivante dans le terminal:
-```git branch newbranch
+
+```
+git branch newbranch
 ```
 ## Etape 6 : Editer le script dans la nouvelle branche pour qu'il affiche tous les fichiers modifiés il y a moins d'une semaine
 
 On édite le scripte dans la nouvelle branche en y ajoutant:
 
-```read -p "Indiquez le chemin du répertoire qui suit /home/sorbonne/ pour afficher les fichier modifiés la semaine dernière " rep7
+```
+read -p "Indiquez le chemin du répertoire qui suit /home/sorbonne/ pour afficher les fichier modifiés la semaine dernière " rep7
 cd /home/sorbonne/$rep7
 findrep7=$(find -type f -mtime -7)
 echo"$findrep7"
@@ -104,7 +109,8 @@ on clique sur "create pull request", puis sur "merge", et sur "confirm merge"
 
 on se place sur la branche master, puis on "merge" master avec newbranch.
 
-```git checkout master
+```
+git checkout master
 git merge newbranch
 ```
 
@@ -112,20 +118,21 @@ git merge newbranch
 
 on supprime en local avec rm puis on pousse sur le repo distant après avoir commité la suppression
 
-```rm Consignes.md
+```
+rm Consignes.md
 git add Consignes.md
 git commit -m "Suppression du fichier Consignes.md"
 git push -u origin master
 ```
-On veille a bien pousser les modifications des deux dernieres étapes en tapant:
 
-```git push 
+On veille a bien pousser les modifications des deux dernieres étapes en tapant:
+```
+git push 
 git pull
 ```
-
-Et en vérifiant si les dépots local et distant sont à jour avec
-
-```git status
+Et en vérifiant si les dépots local et distant sont à jour avec:
+```
+git status
 ```
 Fin du Readme
 
