@@ -38,7 +38,8 @@ vim fich_semaine_derniere.sh
 
 Le fichier contient les lignes de codes suivantes:
 
-```cd ~
+```
+cd ~
 echo "Script executé le  $(date +%d) $(date +%B) $(date +%Y) à $(date +%H) heures $(date +%M) minutes $(date +%S) secondes"
 read -p "Bonjour qui est-ce ? " user
 echo "Bienvenue $USERNAME alias  $user, nous sommes le $(date +%d) $(date +%B) $(date +%Y)"
@@ -61,7 +62,8 @@ jour, mois, année, heure, minute, seconde.
 
 On se place dans notre repo git local, on place le fichier script dans la zone de transit avec git add
 on commit l'ajout réalisé, puis on ajoute le lien distant et on pousse les modifications dessus en entrant notre ID et MdP
-```git add fich_semaine_derniere.sh
+```
+git add fich_semaine_derniere.sh
 git commit -m "Ajout du script fich_semaine_derniere.sh"
 git remote add origin https://github.com/joelst91/MoSEF-projet-2018.git
 git push -u origin master
@@ -91,7 +93,8 @@ dans le repertoire où l'on se situe.
 
 on se positionne sur la branche "newbranch" en tapant:
 
-```git branch newbranch
+```
+git branch newbranch
 git add fich_semaine_derniere.sh
 git commit -m "Edition du script dans newbranch"
 git remote add origin https://github.com/joelst91/MoSEF-projet-2018.git
