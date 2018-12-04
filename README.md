@@ -17,7 +17,7 @@ Pour forker le dépot sur notre compte github,
 Le lien apprait désormais dans la liste de forks du projet avec votre pseudonyme git.
 Plus d'informations, sur ce [Lien](https://help.github.com/articles/fork-a-repo/)
 
-##étape 2 : *Cloner* votre copie en local
+## Etape 2 : *Cloner* votre copie en local
 
 Pour cloner une copie de notre dépôt forké en local, il suffit de taper l'instruction suivante dans le terminal :
 
@@ -103,6 +103,7 @@ on clique sur "create pull request", puis sur "merge", et sur "confirm merge"
 ## Etape 9 : En local, *fusionner* la nouvelle branche à master.
 
 on se place sur la branche master, puis on "merge" master avec newbranch.
+
 ```git checkout master
 git merge newbranch
 ```
