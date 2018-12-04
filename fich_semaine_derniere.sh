@@ -11,3 +11,8 @@ read -p "Veuillez indiquer le chemin du repertoire souhaité, à partir de /home
 cd /home/sorbonne/$rep
 ls
 
+read -p "Indiquez le chemin du répertoire qui suit /home/sorbonne/ pour afficher les fichier modifiés la semaine dernière " rep7
+
+cd /home/sorbonne/$rep7
+
+findrep7=$(find -type f -mtime -7)
